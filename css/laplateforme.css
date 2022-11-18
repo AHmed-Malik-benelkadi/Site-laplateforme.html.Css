@@ -1,0 +1,661 @@
+body{
+    background-image: linear-gradient(to right, dimgrey,cadetblue);
+    height: 100%;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/concrete-wall-background.jpg) center center fixed;
+    background-size: cover;
+
+}
+#onglets
+{
+    font : bold 11px Batang, arial, serif;
+    list-style-type : none;
+    padding-bottom : 4px; /* à modifier suivant la taille de la police ET de la hauteur de l'onglet dans #onglets li */
+    border-bottom : 1px solid black;
+    margin-left : 0;
+    display: inline-block;
+    vertical-align: central;
+    display: flex;
+
+
+
+}
+#onglets li
+{
+
+    float: right;
+    height : 21px; /* à modifier suivant la taille de la police pour centrer le texte dans l'onglet */
+    background-color : black;
+    margin : 2px 2px 0 2px !important;  /* Pour les navigateurs autre que IE */
+    margin : 1px 2px 0 2px;  /* Pour IE  */
+    border : 1px solid #9EA0A1;
+    align-items: center;
+}
+#onglets li.active
+{
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+    background-color : black;
+}
+#onglets a
+{
+    display : block;
+    color : #666;
+    text-decoration : none;
+    padding : 4px;
+    min-width: 120px;
+    text-align: center;
+    transition: all 1s;
+}
+#onglets a:hover
+{
+    background : cornflowerblue;
+}
+img image {
+    display: block;
+    flex-direction: row;
+    align-items: center;
+    float: right;
+    width: 20px;
+    padding-bottom: 4px;
+}
+
+#banniere_image
+{
+    margin-top: 25px;
+    height: 200px;
+    border-radius: 15px;
+    background-image: url("laplateforme icon.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 28px 4px 4px #1c1a19;
+    margin-bottom: 125px;
+
+}
+
+#banniere_description
+{
+    position: absolute;
+    bottom: 0;
+    border-radius: 0px 0px 5px 5px;
+    width: 99.5%;
+    height: 23px;
+    padding-top: 15px;
+    padding-left: 4px;
+    background-color: rgba(24,24,24,0.8);
+    color: white;
+    font-size: 0.8em;
+
+}
+.bouton_rouge
+{
+    height: 25px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background: url('images/fond_degraderouge.png') repeat-x;
+    background-color: darkred;
+    border: 1px solid #760001;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 3px 8px 0px 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.bouton_rouge img
+{
+    border: 0;
+}
+
+/* Formulaire de contacte */
+.shade {
+    overflow: auto;
+    position: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient( 150deg, rgba(23, 0, 0, 0.65), transparent);
+
+}
+
+.blackboard {
+    position: relative;
+    width: 640px;
+    margin: 7% auto;
+    border: tan solid 12px;
+    border-top: #bda27e solid 12px;
+    border-left: #b19876 solid 12px;
+    border-bottom: #c9ad86 solid 12px;
+    box-shadow: 0px 0px 6px 5px rgba(58, 18, 13, 0), 0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f, 3px 4px 8px 5px rgba(0, 0, 0, 0.5);
+    background-image: radial-gradient( circle at left 30%, rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3) 80px, rgba(34, 34, 34, 0.5) 100px, rgba(51, 51, 51, 0.5) 160px, rgba(51, 51, 51, 0.5)), linear-gradient( 215deg, transparent, transparent 100px, #222 260px, #222 320px, transparent), radial-gradient( circle at right, #111, rgba(51, 51, 51, 1));
+    background-color: #333;
+}
+
+.blackboard:before {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( 175deg, transparent, transparent 40px, rgba(120, 120, 120, 0.1) 100px, rgba(120, 120, 120, 0.1) 110px, transparent 220px, transparent), linear-gradient( 200deg, transparent 80%, rgba(50, 50, 50, 0.3)), radial-gradient( ellipse at right bottom, transparent, transparent 200px, rgba(80, 80, 80, 0.1) 260px, rgba(80, 80, 80, 0.1) 320px, transparent 400px, transparent);
+    border: #2c2c2c solid 2px;
+    content: "Contact Us";
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.2em;
+    color: rgba(238, 238, 238, 0.7);
+    text-align: center;
+    padding-top: 20px;
+}
+
+.form {
+    padding: 70px 20px 20px;
+}
+
+p {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+label {
+    vertical-align: middle;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.6em;
+    color: rgba(238, 238, 238, 0.7);
+}
+
+p:nth-of-type(5) > label {
+    vertical-align: top;
+}
+
+input,
+textarea {
+    vertical-align: middle;
+    padding-left: 10px;
+    background: none;
+    border: none;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.6em;
+    color: rgba(238, 238, 238, 0.8);
+    line-height: .6em;
+    outline: none;
+}
+
+textarea {
+    height: 120px;
+    font-size: 1.4em;
+    line-height: 1em;
+    resize: none;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    color: rgba(238, 238, 238, 0.7);
+    line-height: 1em;
+    padding: 0;
+}
+
+input[type="submit"]:focus {
+    background: rgba(238, 238, 238, 0.2);
+    color: rgba(238, 238, 238, 0.2);
+}
+
+::-moz-selection {
+    background: rgba(238, 238, 238, 0.2);
+    color: rgba(238, 238, 238, 0.2);
+    text-shadow: none;
+}
+
+::selection {
+    background: rgba(238, 238, 238, 0.4);
+    color: rgba(238, 238, 238, 0.3);
+    text-shadow: none;
+}
+
+/* Formulaire de contacte */
+
+section
+{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+article, aside
+{
+    text-align: justify;
+}
+
+article
+{
+    margin-right: 20px;
+    flex: 3;
+}
+
+.ico_categorie
+{
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 20px;
+}
+
+article p
+{
+    font-size: 0.8em;
+}
+
+aside
+{
+    flex: 1.2;
+    position: relative;
+    background-color: #706b64;
+    box-shadow: 0px 2px 5px #1c1a19;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 0.9em;
+}
+
+#fleche_bulle
+{
+    position: absolute;
+    top: 100px;
+    left: -12px;
+}
+
+#photo_lapla
+{
+    text-align: center;
+}
+
+#photo_lapla img
+{
+    border: 2px solid auto;
+    width: 220px;
+}
+
+aside img
+{
+    margin-right: 5px;
+    width: 60px;
+}
+hr
+{
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer
+{
+    display: flex;
+    padding-top: 25px;
+}
+
+footer p, footer ul
+{
+    font-size: 0.8em;
+}
+
+footer h1
+{
+    font-size: 1.1em;
+}
+
+#tweet
+{
+    width: 28%;
+}
+
+#mes_photos
+{
+    width: 45%;
+}
+
+#nos-formation
+{
+    width: 31%;
+}
+
+#mes_photos img
+{
+    border: 2px solid AUTO;
+    margin-right: 2px;
+    width: 40px;
+}
+
+#listes-des-information
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+#nos-formation ul
+{
+
+    padding-left: 2px;
+    width: 100%;
+}
+
+#nos-formation a
+{
+    text-decoration: none;
+    color: #760001;
+}
+
+.header {
+    overflow: hidden;
+    background-color: auto;
+    padding: 20px 10px;
+}
+
+/* Style the header links */
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header a.logo {
+    font-size:6px;
+    font-weight: lighter;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+    background-color: #760001;
+    color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+    background-color: auto;
+    color: auto;
+}
+
+/* Float the link section to the right */
+.header-right {
+    float: right;
+}
+.imagebelle
+{
+    width: 320px;
+}
+
+
+.drop:first-letter {
+
+    float: left;
+    line-height: 1;
+
+
+    margin: 0 0.5rem 0 0;
+    padding: 0 0.5rem;
+
+    /* Optional */
+    border:1px solid #d1d5db;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+/* les restart */
+#presentation{
+    width:100%;
+    margin: 0px;
+    padding:0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#image{
+    width:50%;
+    justify-content: flex-end;
+    background-color: darkred;
+}
+.gens{
+    width: 100%;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+#inscription{
+    background-color: darkslateblue;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    align-content:center;
+    padding:5%;
+
+}
+
+bla{
+    color: white;
+    margin-left:5%;
+    margin-right:5%;
+    align-items:center;
+    align-content:center;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+#container-body{
+    text-align: center;
+}
+#presentation a #binscription{
+    width:100%;
+    height:50px;
+    border-radius: 50px;
+    border: 0px;
+    color: white;
+    background-color: #ff2063;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left:5%;
+    padding-right:5%;
+    padding-bottom:0%;
+    font-size: 1em;
+}
+
+.jaja {
+    position: relative;
+    text-align: center;
+
+}
+.blable
+{
+    float: left;
+    text-align: left;
+    color: darkslategrey;
+    display: flex;
+    padding:22px;
+    margin-top: 20px;
+    background-color:;
+
+}
+.icoo
+{
+    background-color: white;
+    padding-top: 0em;
+    margin-top: 0px;
+}
+
+#pre-cloud{
+    width:100%;
+    margin: 0px;
+    padding:0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#image{
+    width:50%;
+    justify-content: flex-end;
+    background-color: blanchedalmond;
+    font-weight: 100%;
+
+}
+.ulimage
+{
+    margin-top: 70px;
+}
+.cloud-gens{
+    width: 100%;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+#inscription{
+    background-color: darkslateblue;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    align-content:center;
+    padding:5%;
+
+}
+
+#cloud-inscription{
+    background-color: blanchedalmond;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    align-content:center;
+    padding:5%;
+
+}
+
+#container-body{
+    text-align: center;
+}
+#presentation a #cloud-b {
+    width:100%;
+    height:50px;
+    border-radius: 50px;
+    border: 0px;
+    color: white;
+    background-color: #ff2063;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left:5%;
+    padding-right:5%;
+    padding-bottom:0%;
+    font-size: 1em;
+}
+
+#container-body{
+    text-align: center;
+}
+#pre-cloud a #cloud-b{
+    width:100%;
+    height:50px;
+    border-radius: 50px;
+    border: 0px;
+    color: white;
+    background-color: #ff2063;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left:5%;
+    padding-right:5%;
+    padding-bottom:0%;
+    font-size: 1em;
+}
+.video
+{
+    text-align: center;
+}
+.presen
+{
+    text-align: center;
+    display: flex;
+    float: bottom;
+    margin-top: 2px;
+    margin-left: 384px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
